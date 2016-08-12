@@ -1,5 +1,7 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url("superhero.css");
+
 
 body {
   // background: #d7e6fa;
@@ -55,8 +57,15 @@ p {
   margin-top: 50px;
 }
 
-#make-survey {
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 2px;
+.alert {
+  float: right;
+  text-align: left;
+  margin-bottom: -10px;
+  font-size: 13px;
 }
+
+// #make-survey {
+//   border: 2px solid black;
+//   border-radius: 5px;
+//   padding: 2px;
+// }

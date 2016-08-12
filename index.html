@@ -6,14 +6,13 @@
 
   <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-  <link href="assets/html/makesurvey.html" rel="import">
 </head>
 
 <body class="container-fluid">
 
 
   <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="col-xs-2">
         <button id="sign-up-in-cp" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Sign Up/Sign In</button>
       </div>
@@ -21,34 +20,41 @@
         <button id="sign-out" class="btn btn-primary">Sign Out!</button>
       </div>
       <div class="col-xs-2">
-      <button id="get-all" class="btn btn-primary">Get All!</button>
-    </div>
-    <div style="margin-top: 20px;" id="error-message" class="main-body" hidden>You Must Sign In First</div>
+        <button id="get-all" class="btn btn-primary">Get All!</button>
+      </div>
+
+      <div id="error-message" class="alert alert-dismissible alert-danger col-xs-2" hidden>
+        Please Sign In~ <br />
+        Email: test@test.com <br />
+        Password: test
+      </div>
+
+      <!-- <div style="margin-top: 20px;" id="error-message" class="main-body text-warning" hidden>You Must Sign In First</div> -->
 
       <div id="sign-in-success" class="col-xs-6" hidden>
-           <button id="make-new-survey" class="btn btn-primary">Make A New Survey</button>
-           <button class="btn btn-danger" id="delete-a-survey">Delete Your Survey!</button>
-         </div>
+        <button id="make-new-survey" class="btn btn-primary">Make A New Survey</button>
+        <button class="btn btn-danger" id="delete-a-survey">Delete Your Survey!</button>
+      </div>
     </div>
     <br>
   </nav>
 
 
-  <h2 style="margin-top:100px; color:black">Sign In to Make or Take a Survey</h2>
+  <h2 style="margin-top:100px;">Sign In to Make or Take a Survey</h2>
   <div class="main-body" id="get-every-survey"></div>
   <div class="main-body" id="take-a-survey"></div>
 
 
   <!-- MAKE A SURVEY HTML -->
   <div id="make-delete-sign-in" hidden>
-    <div id="make-survey">
+    <div id="make-survey" class="jumbotron">
       <br>
       <form id="survey-title-input">
         <fieldset>
           <div>
             <input id="survey-test-title" type="text" name="surveys[title]" placeholder="Survey Title!">
           </div>
-          <div id="survey-title-error" hidden>I'm sorry, that title is already taken, please try another.</div>
+          <div id="survey-title-error" class="text-danger" hidden>I'm sorry, that title is already taken, please try another.</div>
           <div>
             <input class="btn btn-primary" type="submit" name="submit" value="Submit Title">
           </div>
@@ -69,7 +75,7 @@
             <br>
           </div>
           <input class="btn btn-primary" id="add-question!" type="submit" name="submit" value="Add that question!">
-          <p>Please add question using "Add that question!" button before pressing Survey Creation Complete</p>
+          <p class="text-info">Please add question using "Add that question!" button before pressing Survey Creation Complete</p>
         </fieldset>
       </form>
       <input class="btn btn-primary" id="add-another-answer" type="button" name="addmore" value="Add another answer">
@@ -99,7 +105,7 @@
               <input id="signup-email" type="email" name="credentials[email]" placeholder="Username">
               <input id="signup-password" type="password" name="credentials[password]" placeholder="Password">
               <input id="signup_passwordconf" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-              <input type="submit" name="submit" value="Sign up!">
+              <button class="btn btn-primary" name="submit" value="Sign up!" style="margin-bottom: 15px; margin-top: -2px;">submit</button>
               <div class="error"></div>
             </form>
           </div>
@@ -108,7 +114,7 @@
             <form id="sign-in">
               <input id="signin-email" type="email" name="credentials[email]" placeholder="Username">
               <input id="signin-password" type="password" name="credentials[password]" placeholder="Password">
-              <input type="submit" name="submit" value="Sign In">
+              <button class="btn btn-primary" name="submit" value="Sign In" style="margin-bottom: 15px; margin-top: -2px;">submit</button>
               <div class="error"></div>
             </form>
           </div>
@@ -117,7 +123,7 @@
             <form id="change-password">
               <input id="password-old" type="password" name="passwords[old]" placeholder="Current Password">
               <input id="password-new" type="password" name="passwords[new]" placeholder="New Password">
-              <input type="submit" name="submit" value="Change Password">
+              <button class="btn btn-primary" name="submit" value="Change Password" style="margin-bottom: 15px; margin-top: -2px;">submit</button>
               <div class="error"></div>
             </form>
           </div>
@@ -125,13 +131,7 @@
       </div>
     </div>
   </div>
-  <!--
 
-var link = document.querySelector('link[rel="import"]');
-var post = link.import.querySelector('#make-survey');
-var container = document.querySelector('#container');
-container.appendChild(post.cloneNode(true)); -->
-  <!-- </script> -->
 </body>
 
 </html>
