@@ -1,0 +1,62 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  // background: #d7e6fa;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'armalite_rifleregular';
+}
+
+form {
+  margin: 10;
+  //text-align: center;
+}
+
+button,
+input,
+textarea {
+  border: 0;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  outline: none;
+  padding: 5px 10px;
+  margin: 20px;
+  //text-align: center;
+}
+
+label {
+   padding: 10px;
+}
+
+.radio-button {
+  margin: 20px;
+}
+//
+p {
+  padding-top: 10px;
+}
+
+#survey-questions {
+  text-align: left;
+}
+
+.btn-warning {
+  width: 200px;
+//height: 10em;
+  //padding: 40px;
+  //margin: 20px;
+}
+
+.main-body {
+  margin-top: 50px;
+}
+
+#make-survey {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 2px;
+}
