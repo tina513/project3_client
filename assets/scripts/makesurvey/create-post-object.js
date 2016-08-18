@@ -6,9 +6,6 @@ let surveyObject = {
   }
 };
 
-//don't let this reset to blank every time
-//does need to reset to blank on a new instance!!
-
 const setTitle = (data) => {
   surveyObject.survey.title = data.surveys.title;
   $('#survey-title').text(surveyObject.survey.title);

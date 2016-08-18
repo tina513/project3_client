@@ -1,10 +1,9 @@
 'use strict';
-//
+
 const getFormFields = require('../../../lib/get-form-fields');
 const takeSurvey = require('../takesurvey/ui.js');
 const api = require('./api');
 const ui = require('./ui');
-//const index = require('../index.js');
 const createPostObject = require('./create-post-object.js');
 
 const onShowMakeSurvey = () => {
@@ -54,13 +53,6 @@ const onCreateSurvey = () => {
   .fail(ui.createSurveyFailure);
 };
 
-// const onDeleteSurvey = () => {
-//   let data = $('#survey-test-title').val();
-//   console.log(data);
-//   api.deleteSurvey(data)
-//   .done(ui.deleteSurveySuccess)
-//   .fail(ui.deleteSurveyError);
-// };
 
 const addHandlers = () => {
   $('#make-survey').hide();
@@ -69,8 +61,6 @@ const addHandlers = () => {
   $('#add-another-answer').on('click', onCreateOption);
   $('#survey-fillout').on('submit', onCreateQuestion);
   $('#complete-survey-creation').on('click', onCreateSurvey);
-  //$('#delete-a-survey').on('click', onDeleteSurvey);
-
 };
 
 module.exports = {

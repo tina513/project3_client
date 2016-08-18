@@ -15,14 +15,6 @@ const onGetSurveys = () => {
   .fail(ui.getSurveyFailure);
 };
 
-// const onGetASurvey = (event) => {
-//   let id = this.id;
-//   console.log(id);
-//   api.getASurvey(id)
-//   .done(ui.getASurveySuccess)
-//   .fail(ui.getASurveyFailure);
-// };
-
 const showDeleteSurveys = () => {
   let data = ui.backDataSurvey();
   let arr = data.surveys;
@@ -41,12 +33,6 @@ const showDeleteSurveys = () => {
      .fail(ui.deleteSurveyError);
   });
 };
-
-// const onCompleteSurvey = () => {
-//   api.completedSurvey()
-//   .done(ui.completeSurveySuccess)
-//   .fail(ui.completeSurveyFailure);
-// };
 
 const addHandlers = () => {
   $('#get-every-survey').show(onGetSurveys);

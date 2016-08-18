@@ -1,7 +1,6 @@
 'use strict';
 
 const surveyApi = require('./surveyFetch.js');
-//const Handlebars = require('handlebars');
 
 let dataSurvey = {};
 
@@ -31,9 +30,6 @@ const getASurveySuccess = (data) => {
       "votesArray": []
     };
     let surveyId = $('h3').attr('id');
-    // Handlebars.registerHelper('position', function (){
-    //   surveyLength ++;
-    // });
     let radios = document.getElementsByClassName("radio-button");
 
     for (let i = 0; i < radios.length ; i++) {
@@ -52,13 +48,11 @@ const getASurveyFailure = (error) => {
 };
 
 const getSurveySuccess = (data) => {
-  // console.log(data.surveys);
   dataSurvey = data;
   let surveyListing = require('../templates/getAllSurveys.handlebars');
   for (var i = 0; i < data.surveys.length; i += 3) {
     $("#get-every-survey").append(surveyListing(data.surveys.slice(i, i + 3)));
   }
-  // $('#get-every-survey').html(surveyListing(data));
   $('#take-a-survey').empty();
   $('.btn-warning').on('click', function() {
     let id = this.id;

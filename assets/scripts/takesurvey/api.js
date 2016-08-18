@@ -19,16 +19,6 @@ const deleteSurvey = (id) => {
       });
 };
 
-// const completedSurvey = (data, survey_id) => {
-//   return $.ajax({
-//     url: app.host + '/surveys/' + survey_id,
-//     method: "PATCH",
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token,
-//     },
-//     data: data
-//   });
-// };
 
 module.exports = {
   getSurveys,
